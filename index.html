@@ -1,0 +1,510 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Joshua Carpinteiro — Portfolio</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&family=Syne:wght@400;600;800&display=swap" rel="stylesheet"/>
+</head>
+<body>
+
+  <!-- ============================================================
+       NOISE OVERLAY — decorative, do not modify
+  ============================================================ -->
+  <div class="noise"></div>
+  <div class="scanlines"></div>
+
+  <!-- ============================================================
+       HEADER / HERO
+       ✏️ UPDATE: your name, title, location, tagline
+  ============================================================ -->
+  <header class="hero">
+    <div class="hero-grid">
+      <div class="hero-tag">[ PORTFOLIO_v1.0 ]</div>
+      <h1 class="hero-name">
+        <span class="glitch" data-text="Joshua">Joshua</span><br/>
+        <span class="glitch dim" data-text="Carpinteiro">Carpinteiro</span>
+      </h1>
+      <p class="hero-role">
+        <span class="cursor-blink">▋</span>
+        <!-- ✏️ UPDATE: your degree / role -->
+        Computer Systems Engineering — Year 2
+      </p>
+      <p class="hero-sub">
+        <!-- ✏️ UPDATE: one punchy line about you -->
+        Building at the intersection of hardware and software. Passionate about embedded systems, low-level programming, and making things that actually work.
+      </p>
+
+      <!-- ✏️ UPDATE: your GitHub and LinkedIn URLs -->
+      <div class="hero-links">
+        <a href="https://github.com/YOURUSERNAME" target="_blank" class="btn-link">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 .5C5.65.5.5 5.65.5 12c0 5.1 3.29 9.42 7.86 10.95.58.1.79-.25.79-.56v-2c-3.2.69-3.87-1.54-3.87-1.54-.52-1.34-1.28-1.7-1.28-1.7-1.05-.71.08-.7.08-.7 1.16.08 1.77 1.2 1.77 1.2 1.03 1.76 2.7 1.25 3.36.96.1-.75.4-1.25.73-1.54-2.55-.29-5.23-1.28-5.23-5.68 0-1.26.45-2.28 1.18-3.09-.12-.29-.51-1.46.11-3.05 0 0 .97-.31 3.17 1.18a11.06 11.06 0 0 1 5.78 0c2.2-1.49 3.16-1.18 3.16-1.18.63 1.59.24 2.76.12 3.05.74.81 1.18 1.83 1.18 3.09 0 4.41-2.69 5.39-5.25 5.67.41.36.78 1.06.78 2.13v3.16c0 .31.2.67.8.56C20.22 21.41 23.5 17.1 23.5 12 23.5 5.65 18.35.5 12 .5z"/></svg>
+          GitHub
+        </a>
+        <a href="https://linkedin.com/in/YOURUSERNAME" target="_blank" class="btn-link">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M20.45 20.45h-3.55v-5.57c0-1.33-.03-3.04-1.85-3.04-1.85 0-2.13 1.45-2.13 2.94v5.67H9.37V9h3.41v1.56h.05c.47-.9 1.63-1.85 3.36-1.85 3.59 0 4.26 2.37 4.26 5.44v6.3zM5.34 7.43a2.06 2.06 0 1 1 0-4.12 2.06 2.06 0 0 1 0 4.12zM3.56 20.45h3.55V9H3.56v11.45zM22.23 0H1.77C.79 0 0 .77 0 1.72v20.56C0 23.23.79 24 1.77 24h20.46c.98 0 1.77-.77 1.77-1.72V1.72C24 .77 23.21 0 22.23 0z"/></svg>
+          LinkedIn
+        </a>
+        <!-- ✏️ OPTIONAL: add your email -->
+        <a href="mailto:you@example.com" class="btn-link outline">
+          Contact
+        </a>
+      </div>
+    </div>
+
+    <!-- decorative terminal block -->
+    <div class="hero-terminal" aria-hidden="true">
+      <div class="terminal-bar"><span></span><span></span><span></span></div>
+      <div class="terminal-body">
+        <p><span class="t-green">~</span> <span class="t-cyan">whoami</span></p>
+        <!-- ✏️ UPDATE: match your details -->
+        <p>joshua_carpinteiro</p>
+        <p><span class="t-green">~</span> <span class="t-cyan">cat</span> status.txt</p>
+        <p><span class="t-yellow">2nd year @ university</span></p>
+        <p><span class="t-green">~</span> <span class="t-cyan">ls</span> interests/</p>
+        <!-- ✏️ UPDATE: your interests -->
+        <p>embedded_systems/ &nbsp; os_dev/ &nbsp; networks/ &nbsp; robotics/</p>
+        <p><span class="t-green">~</span> <span class="cursor-blink-sm">█</span></p>
+      </div>
+    </div>
+  </header>
+
+  <!-- ============================================================
+       NAV TABS
+       — Do not modify tab labels unless you change JS too
+  ============================================================ -->
+  <nav class="tab-nav" id="tab-nav">
+    <div class="tab-nav-inner">
+      <button class="tab-btn active" data-tab="summary">01_summary</button>
+      <button class="tab-btn" data-tab="skills">02_skills</button>
+      <button class="tab-btn" data-tab="projects">03_projects</button>
+      <button class="tab-btn" data-tab="experience">04_experience</button>
+    </div>
+  </nav>
+
+  <!-- ============================================================
+       MAIN CONTENT AREA
+  ============================================================ -->
+  <main class="content-area">
+
+    <!-- ==================== SUMMARY TAB ==================== -->
+    <section class="tab-panel active" id="tab-summary">
+      <div class="section-header">
+        <span class="section-index">01</span>
+        <h2>Summary</h2>
+      </div>
+
+      <div class="summary-grid">
+        <div class="summary-bio card">
+          <h3 class="card-label">// about_me</h3>
+          <p>
+            <!-- ✏️ UPDATE: write 2–3 sentences about yourself -->
+            Hey, I'm Joshua — a second-year Computer Systems Engineering student with a deep interest in how software meets hardware. I like building things from scratch, whether that's a low-level driver, a network tool, or a weekend project that spirals out of control.
+          </p>
+          <p>
+            <!-- ✏️ UPDATE: what drives you? -->
+            I'm driven by curiosity and a need to understand how things <em>actually</em> work under the hood. Currently focused on expanding my knowledge in embedded systems and operating system fundamentals.
+          </p>
+        </div>
+
+        <div class="summary-stats card">
+          <h3 class="card-label">// quick_stats</h3>
+          <ul class="stat-list">
+            <!-- ✏️ UPDATE: each stat -->
+            <li><span class="stat-label">Program</span><span class="stat-val">Computer Systems Eng.</span></li>
+            <li><span class="stat-label">Year</span><span class="stat-val">2nd Year</span></li>
+            <!-- ✏️ UPDATE: your university -->
+            <li><span class="stat-label">University</span><span class="stat-val">YOUR UNIVERSITY</span></li>
+            <!-- ✏️ UPDATE: your GPA or remove -->
+            <li><span class="stat-label">GPA</span><span class="stat-val">X.X / 4.0</span></li>
+            <li><span class="stat-label">Location</span><span class="stat-val">📍 Montréal, QC</span></li>
+            <!-- ✏️ UPDATE: your availability -->
+            <li><span class="stat-label">Status</span><span class="stat-val available">Open to internships</span></li>
+          </ul>
+        </div>
+
+        <div class="summary-focus card">
+          <h3 class="card-label">// current_focus</h3>
+          <!-- ✏️ UPDATE: what you're currently learning/working on -->
+          <div class="focus-items">
+            <div class="focus-item">
+              <span class="focus-icon">⚙️</span>
+              <div>
+                <strong>Embedded Systems</strong>
+                <p>Microcontrollers, RTOS, bare-metal programming</p>
+              </div>
+            </div>
+            <div class="focus-item">
+              <span class="focus-icon">🌐</span>
+              <div>
+                <strong>Computer Networks</strong>
+                <p>Protocols, socket programming, network tools</p>
+              </div>
+            </div>
+            <div class="focus-item">
+              <span class="focus-icon">🧠</span>
+              <div>
+                <!-- ✏️ UPDATE: add a third focus area -->
+                <strong>Operating Systems</strong>
+                <p>Memory management, scheduling, systems programming</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== SKILLS TAB ==================== -->
+    <section class="tab-panel" id="tab-skills">
+      <div class="section-header">
+        <span class="section-index">02</span>
+        <h2>Skills</h2>
+      </div>
+
+      <div class="skills-grid">
+
+        <!-- ✏️ UPDATE: languages you know + proficiency 0–100 -->
+        <div class="skill-category card">
+          <h3 class="card-label">// languages</h3>
+          <div class="skill-bars">
+            <div class="skill-row">
+              <span>C</span>
+              <div class="bar"><div class="bar-fill" style="--pct: 85%"></div></div>
+              <span class="pct">85%</span>
+            </div>
+            <div class="skill-row">
+              <span>Python</span>
+              <div class="bar"><div class="bar-fill" style="--pct: 80%"></div></div>
+              <span class="pct">80%</span>
+            </div>
+            <div class="skill-row">
+              <span>C++</span>
+              <div class="bar"><div class="bar-fill" style="--pct: 65%"></div></div>
+              <span class="pct">65%</span>
+            </div>
+            <div class="skill-row">
+              <!-- ✏️ UPDATE or add/remove rows -->
+              <span>Assembly (ARM)</span>
+              <div class="bar"><div class="bar-fill" style="--pct: 55%"></div></div>
+              <span class="pct">55%</span>
+            </div>
+            <div class="skill-row">
+              <span>JavaScript</span>
+              <div class="bar"><div class="bar-fill" style="--pct: 50%"></div></div>
+              <span class="pct">50%</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- ✏️ UPDATE: tools & technologies you use -->
+        <div class="skill-category card">
+          <h3 class="card-label">// tools &amp; tech</h3>
+          <div class="tag-cloud">
+            <!-- ✏️ UPDATE: add/remove tags -->
+            <span class="tag">Git</span>
+            <span class="tag">Linux</span>
+            <span class="tag">GCC / Make</span>
+            <span class="tag">GDB</span>
+            <span class="tag">VS Code</span>
+            <span class="tag">Docker</span>
+            <span class="tag">Bash</span>
+            <span class="tag">Wireshark</span>
+            <span class="tag">STM32</span>
+            <span class="tag">Raspberry Pi</span>
+            <span class="tag">QEMU</span>
+            <!-- ✏️ ADD more tools you know -->
+          </div>
+        </div>
+
+        <!-- ✏️ UPDATE: coursework highlights -->
+        <div class="skill-category card">
+          <h3 class="card-label">// academic_coursework</h3>
+          <div class="course-list">
+            <!-- ✏️ UPDATE: courses you've taken or are taking -->
+            <div class="course-item">
+              <span class="course-code">ENG 201</span>
+              <!-- ✏️ UPDATE: actual course name -->
+              <span class="course-name">Digital Systems Design</span>
+            </div>
+            <div class="course-item">
+              <span class="course-code">CS 210</span>
+              <span class="course-name">Data Structures &amp; Algorithms</span>
+            </div>
+            <div class="course-item">
+              <span class="course-code">ENG 215</span>
+              <span class="course-name">Computer Architecture</span>
+            </div>
+            <div class="course-item">
+              <span class="course-code">ENG 220</span>
+              <span class="course-name">Embedded Systems</span>
+            </div>
+            <div class="course-item">
+              <span class="course-code">CS 230</span>
+              <span class="course-name">Operating Systems</span>
+            </div>
+            <div class="course-item">
+              <!-- ✏️ UPDATE: add more courses -->
+              <span class="course-code">NET 205</span>
+              <span class="course-name">Computer Networks</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- ✏️ UPDATE: soft skills / other strengths -->
+        <div class="skill-category card">
+          <h3 class="card-label">// other_strengths</h3>
+          <div class="tag-cloud">
+            <!-- ✏️ UPDATE: your soft skills -->
+            <span class="tag accent">Problem Solving</span>
+            <span class="tag accent">Technical Writing</span>
+            <span class="tag accent">Team Collaboration</span>
+            <span class="tag accent">Debugging</span>
+            <span class="tag accent">Self-Learning</span>
+            <span class="tag accent">Project Management</span>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ==================== PROJECTS TAB ==================== -->
+    <section class="tab-panel" id="tab-projects">
+      <div class="section-header">
+        <span class="section-index">03</span>
+        <h2>Projects</h2>
+      </div>
+
+      <div class="projects-grid">
+
+        <!-- ✏️ UPDATE: Project 1 — replace ALL fields -->
+        <div class="project-card card">
+          <div class="project-header">
+            <span class="project-tag">featured</span>
+            <div class="project-links">
+              <!-- ✏️ UPDATE: GitHub repo link -->
+              <a href="https://github.com/YOURUSERNAME/PROJECT_REPO" target="_blank" class="icon-link" title="GitHub">
+                <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 .5C5.65.5.5 5.65.5 12c0 5.1 3.29 9.42 7.86 10.95.58.1.79-.25.79-.56v-2c-3.2.69-3.87-1.54-3.87-1.54-.52-1.34-1.28-1.7-1.28-1.7-1.05-.71.08-.7.08-.7 1.16.08 1.77 1.2 1.77 1.2 1.03 1.76 2.7 1.25 3.36.96.1-.75.4-1.25.73-1.54-2.55-.29-5.23-1.28-5.23-5.68 0-1.26.45-2.28 1.18-3.09-.12-.29-.51-1.46.11-3.05 0 0 .97-.31 3.17 1.18a11.06 11.06 0 0 1 5.78 0c2.2-1.49 3.16-1.18 3.16-1.18.63 1.59.24 2.76.12 3.05.74.81 1.18 1.83 1.18 3.09 0 4.41-2.69 5.39-5.25 5.67.41.36.78 1.06.78 2.13v3.16c0 .31.2.67.8.56C20.22 21.41 23.5 17.1 23.5 12 23.5 5.65 18.35.5 12 .5z"/></svg>
+              </a>
+            </div>
+          </div>
+          <!-- ✏️ UPDATE: project name -->
+          <h3 class="project-title">RTOS Task Scheduler</h3>
+          <!-- ✏️ UPDATE: what the project does -->
+          <p class="project-desc">A minimal real-time operating system kernel written in C for ARM Cortex-M. Implements preemptive scheduling, context switching, and basic inter-task communication via message queues.</p>
+          <div class="project-stack">
+            <!-- ✏️ UPDATE: technologies used -->
+            <span class="tag small">C</span>
+            <span class="tag small">ARM Cortex-M</span>
+            <span class="tag small">STM32</span>
+            <span class="tag small">RTOS</span>
+          </div>
+        </div>
+
+        <!-- ✏️ UPDATE: Project 2 -->
+        <div class="project-card card">
+          <div class="project-header">
+            <span class="project-tag">academic</span>
+            <div class="project-links">
+              <!-- ✏️ UPDATE or remove if no public repo -->
+              <a href="https://github.com/YOURUSERNAME/PROJECT_REPO" target="_blank" class="icon-link" title="GitHub">
+                <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 .5C5.65.5.5 5.65.5 12c0 5.1 3.29 9.42 7.86 10.95.58.1.79-.25.79-.56v-2c-3.2.69-3.87-1.54-3.87-1.54-.52-1.34-1.28-1.7-1.28-1.7-1.05-.71.08-.7.08-.7 1.16.08 1.77 1.2 1.77 1.2 1.03 1.76 2.7 1.25 3.36.96.1-.75.4-1.25.73-1.54-2.55-.29-5.23-1.28-5.23-5.68 0-1.26.45-2.28 1.18-3.09-.12-.29-.51-1.46.11-3.05 0 0 .97-.31 3.17 1.18a11.06 11.06 0 0 1 5.78 0c2.2-1.49 3.16-1.18 3.16-1.18.63 1.59.24 2.76.12 3.05.74.81 1.18 1.83 1.18 3.09 0 4.41-2.69 5.39-5.25 5.67.41.36.78 1.06.78 2.13v3.16c0 .31.2.67.8.56C20.22 21.41 23.5 17.1 23.5 12 23.5 5.65 18.35.5 12 .5z"/></svg>
+              </a>
+            </div>
+          </div>
+          <!-- ✏️ UPDATE -->
+          <h3 class="project-title">TCP/IP Stack Implementation</h3>
+          <p class="project-desc">Built a simplified TCP/IP networking stack from scratch as part of a networks course. Implemented ARP, IP routing, and TCP connection handling including the three-way handshake.</p>
+          <div class="project-stack">
+            <span class="tag small">C</span>
+            <span class="tag small">Networking</span>
+            <span class="tag small">Sockets</span>
+            <span class="tag small">Wireshark</span>
+          </div>
+        </div>
+
+        <!-- ✏️ UPDATE: Project 3 -->
+        <div class="project-card card">
+          <div class="project-header">
+            <span class="project-tag">personal</span>
+            <div class="project-links">
+              <a href="https://github.com/YOURUSERNAME/PROJECT_REPO" target="_blank" class="icon-link" title="GitHub">
+                <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 .5C5.65.5.5 5.65.5 12c0 5.1 3.29 9.42 7.86 10.95.58.1.79-.25.79-.56v-2c-3.2.69-3.87-1.54-3.87-1.54-.52-1.34-1.28-1.7-1.28-1.7-1.05-.71.08-.7.08-.7 1.16.08 1.77 1.2 1.77 1.2 1.03 1.76 2.7 1.25 3.36.96.1-.75.4-1.25.73-1.54-2.55-.29-5.23-1.28-5.23-5.68 0-1.26.45-2.28 1.18-3.09-.12-.29-.51-1.46.11-3.05 0 0 .97-.31 3.17 1.18a11.06 11.06 0 0 1 5.78 0c2.2-1.49 3.16-1.18 3.16-1.18.63 1.59.24 2.76.12 3.05.74.81 1.18 1.83 1.18 3.09 0 4.41-2.69 5.39-5.25 5.67.41.36.78 1.06.78 2.13v3.16c0 .31.2.67.8.56C20.22 21.41 23.5 17.1 23.5 12 23.5 5.65 18.35.5 12 .5z"/></svg>
+              </a>
+            </div>
+          </div>
+          <!-- ✏️ UPDATE -->
+          <h3 class="project-title">Linux Shell Clone</h3>
+          <p class="project-desc">A Unix-like shell built in C supporting piping, I/O redirection, background processes, and built-in commands. Handles signals correctly and supports job control.</p>
+          <div class="project-stack">
+            <span class="tag small">C</span>
+            <span class="tag small">Linux</span>
+            <span class="tag small">POSIX</span>
+            <span class="tag small">Systems</span>
+          </div>
+        </div>
+
+        <!-- ✏️ UPDATE: Project 4 — add more cards by duplicating a block -->
+        <div class="project-card card">
+          <div class="project-header">
+            <span class="project-tag">personal</span>
+            <div class="project-links">
+              <a href="https://github.com/YOURUSERNAME/PROJECT_REPO" target="_blank" class="icon-link" title="GitHub">
+                <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 .5C5.65.5.5 5.65.5 12c0 5.1 3.29 9.42 7.86 10.95.58.1.79-.25.79-.56v-2c-3.2.69-3.87-1.54-3.87-1.54-.52-1.34-1.28-1.7-1.28-1.7-1.05-.71.08-.7.08-.7 1.16.08 1.77 1.2 1.77 1.2 1.03 1.76 2.7 1.25 3.36.96.1-.75.4-1.25.73-1.54-2.55-.29-5.23-1.28-5.23-5.68 0-1.26.45-2.28 1.18-3.09-.12-.29-.51-1.46.11-3.05 0 0 .97-.31 3.17 1.18a11.06 11.06 0 0 1 5.78 0c2.2-1.49 3.16-1.18 3.16-1.18.63 1.59.24 2.76.12 3.05.74.81 1.18 1.83 1.18 3.09 0 4.41-2.69 5.39-5.25 5.67.41.36.78 1.06.78 2.13v3.16c0 .31.2.67.8.56C20.22 21.41 23.5 17.1 23.5 12 23.5 5.65 18.35.5 12 .5z"/></svg>
+              </a>
+            </div>
+          </div>
+          <!-- ✏️ UPDATE: your 4th project -->
+          <h3 class="project-title">YOUR PROJECT TITLE</h3>
+          <p class="project-desc">Brief description of what this project does, the problem it solves, and anything interesting about how you built it.</p>
+          <div class="project-stack">
+            <span class="tag small">Lang1</span>
+            <span class="tag small">Tool2</span>
+            <span class="tag small">Framework3</span>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ==================== EXPERIENCE TAB ==================== -->
+    <section class="tab-panel" id="tab-experience">
+      <div class="section-header">
+        <span class="section-index">04</span>
+        <h2>Experience</h2>
+      </div>
+
+      <div class="experience-layout">
+
+        <div class="timeline">
+
+          <!-- ✏️ UPDATE: Work / Internship experience block
+               If you have none yet, leave the placeholder or remove the block -->
+          <div class="timeline-item">
+            <div class="timeline-dot"></div>
+            <div class="timeline-content card">
+              <div class="exp-header">
+                <!-- ✏️ UPDATE: job title -->
+                <h3>YOUR JOB TITLE</h3>
+                <!-- ✏️ UPDATE: company / org -->
+                <span class="exp-company">Company / Organization</span>
+              </div>
+              <span class="exp-date">
+                <!-- ✏️ UPDATE: date range -->
+                Month YYYY — Month YYYY
+              </span>
+              <ul class="exp-bullets">
+                <!-- ✏️ UPDATE: bullet points of what you did -->
+                <li>Describe a key responsibility or achievement here.</li>
+                <li>Use action verbs: built, designed, implemented, improved...</li>
+                <li>Quantify impact where possible (e.g. reduced X by 20%).</li>
+              </ul>
+              <div class="exp-tags">
+                <span class="tag small">Tool used</span>
+                <span class="tag small">Another skill</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Academic / Club experience -->
+          <div class="timeline-item">
+            <div class="timeline-dot"></div>
+            <div class="timeline-content card">
+              <div class="exp-header">
+                <!-- ✏️ UPDATE: role in club/team/org -->
+                <h3>YOUR ROLE IN CLUB / TEAM</h3>
+                <!-- ✏️ UPDATE: org name -->
+                <span class="exp-company">Engineering Club / Hackathon Team</span>
+              </div>
+              <span class="exp-date">Month YYYY — Present</span>
+              <ul class="exp-bullets">
+                <li>Describe what you contributed to this team or club.</li>
+                <li>Mention any specific projects, events, or initiatives you led.</li>
+              </ul>
+              <div class="exp-tags">
+                <span class="tag small">Teamwork</span>
+                <span class="tag small">Leadership</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Volunteer / Other -->
+          <div class="timeline-item">
+            <div class="timeline-dot"></div>
+            <div class="timeline-content card">
+              <div class="exp-header">
+                <!-- ✏️ UPDATE or remove this block entirely if not needed -->
+                <h3>Volunteer / Other Experience</h3>
+                <span class="exp-company">Organization Name</span>
+              </div>
+              <span class="exp-date">Month YYYY — Month YYYY</span>
+              <ul class="exp-bullets">
+                <li>Any relevant volunteer work, tutoring, TA roles, or side activities.</li>
+                <li>Even informal experience counts — tutoring peers, helping at events.</li>
+              </ul>
+              <div class="exp-tags">
+                <span class="tag small">Communication</span>
+                <span class="tag small">Mentoring</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- ✏️ ADD MORE blocks by duplicating a timeline-item div -->
+
+        </div>
+
+        <!-- Side panel: Education -->
+        <div class="education-panel">
+          <div class="card edu-card">
+            <h3 class="card-label">// education</h3>
+            <!-- ✏️ UPDATE: your university name -->
+            <p class="edu-school">YOUR UNIVERSITY NAME</p>
+            <p class="edu-degree">B.Eng — Computer Systems Engineering</p>
+            <!-- ✏️ UPDATE: graduation year -->
+            <p class="edu-year">Expected Graduation: 20XX</p>
+            <hr class="edu-divider"/>
+            <!-- ✏️ UPDATE: any awards, scholarships, honour roll -->
+            <p class="card-label">// awards &amp; recognition</p>
+            <ul class="edu-awards">
+              <li>Dean's List — YEAR</li>
+              <li>Scholarship / Award Name</li>
+              <!-- ✏️ ADD or remove items -->
+            </ul>
+          </div>
+
+          <div class="card edu-card">
+            <h3 class="card-label">// languages_spoken</h3>
+            <!-- ✏️ UPDATE: languages you speak -->
+            <ul class="stat-list">
+              <li><span class="stat-label">English</span><span class="stat-val available">Native</span></li>
+              <li><span class="stat-label">French</span><span class="stat-val">Conversational</span></li>
+              <!-- ✏️ ADD more if applicable -->
+            </ul>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ============================================================
+       FOOTER
+       ✏️ UPDATE: your name, year, and links
+  ============================================================ -->
+  <footer class="site-footer">
+    <p>
+      <span class="t-green">joshua_carpinteiro</span>
+      <span class="t-dim"> // built with HTML, CSS &amp; JS // </span>
+      <!-- ✏️ UPDATE: year -->
+      <span class="t-green">2025</span>
+    </p>
+    <div class="footer-links">
+      <a href="https://github.com/YOURUSERNAME" target="_blank">GitHub</a>
+      <a href="https://linkedin.com/in/YOURUSERNAME" target="_blank">LinkedIn</a>
+    </div>
+  </footer>
+
+  <script src="main.js"></script>
+</body>
+</html>
